@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.tar.gz
+*.zip
+*.ko
+*.key
+*.private
+*.sqlite*
+*.log
+/backups/
+/runtime/
+/state/
+panel/bin/

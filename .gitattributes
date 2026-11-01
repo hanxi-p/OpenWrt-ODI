@@ -1,0 +1,8 @@
+* text=auto
+*.uc text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+panel/** text=auto eol=lf
+odi/** text=auto eol=lf
+panel/wan/fonts/*.woff2 binary
+panel/wan/fonts/OFL.txt whitespace=-blank-at-eol

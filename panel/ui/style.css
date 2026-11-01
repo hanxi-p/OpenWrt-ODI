@@ -1,0 +1,30 @@
+/* F50 card styles; the enclosing .f50-home provides the shared palette/font. */
+.rt-root [hidden]{display:none!important}
+.rt-root .mud-body>.mud-sec+.mud-sec{border-top:1px dashed color-mix(in oklab,var(--hairline,var(--border,#ddd)) 60%,transparent);margin-top:8px;padding-top:2px}
+.rt-root .rt-device-toggle:after,.rt-root .rt-device-offline-toggle:after{content:' ▸';font-size:.8em;opacity:.7}
+.rt-root [aria-expanded=true].rt-device-toggle:after,.rt-root [aria-expanded=true].rt-device-offline-toggle:after{content:' ▾'}
+.rt-root .f50-load-section>.mud-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:0!important;margin-bottom:6px}
+.rt-root .f50-load-section>.mud-kpis b{font-size:1.4rem}
+.rt-root .rt-kpi{min-width:0}
+.rt-root .rt-kpi>span{display:block}
+.rt-root .rt-kpi-sub{white-space:pre-line;line-height:1.45}
+.rt-root .rt-temp-card{border:1px solid var(--border-color,rgba(127,127,127,.28));border-radius:8px}
+.rt-root .rt-temp-card>.rt-kpi-sub{display:grid;grid-template-columns:1fr;gap:2px;margin:4px 0 0}
+.rt-root .rt-temp-card .rt-kpi-sub span{display:block;font-size:.65rem;padding:0;border:0;text-align:left;white-space:nowrap}
+.rt-root .rt-meter{height:5px;border-radius:3px;background:var(--surface-sunken,rgba(127,127,127,.15));overflow:hidden;margin:3px 0 1px}
+.rt-root .rt-meter i{display:block;height:100%;border-radius:3px;background:var(--brand,#0085b7)}
+.rt-root .rt-ram-card .rt-meter i{background:var(--info,#0e5794)}
+.rt-root .rt-disk-card .rt-meter i{background:var(--warning,#643e00)}
+.rt-root .rt-core-inline{padding:3px 0 0;font-size:.65rem;line-height:1.45;white-space:pre-line;color:var(--text-muted,#5f666d)}
+.rt-root .rt-storage-details{margin:4px 0 2px;font-size:.82rem;line-height:1.4}
+.rt-root .rt-storage-details summary{cursor:pointer;font-weight:600;list-style:none}
+.rt-root details>summary::marker{content:''}
+.rt-root details>summary::-webkit-details-marker{display:none}
+.rt-root details>summary::before{content:'▸';display:inline-block;width:.7em;margin-right:.35em;font-size:.75em;opacity:.75}
+.rt-root details[open]>summary::before{content:'▾'}
+.rt-root .rt-extra-cards{margin-top:8px;max-width:420px}
+@media(max-width:600px){
+ .rt-root .f50-load-section>.mud-kpis .mud-kpi{padding:7px 6px}
+ .rt-root .f50-load-section>.mud-kpis span{font-size:.68rem}
+ .rt-root .rt-temp-card .rt-kpi-sub span{font-size:.62rem}
+}
