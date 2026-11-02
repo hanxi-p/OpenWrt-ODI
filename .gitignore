@@ -11,3 +11,7 @@ __pycache__/
 /runtime/
 /state/
 panel/bin/
+
+/datasets/
+/private/
+*.jsonl

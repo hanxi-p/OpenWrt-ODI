@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/hanxi-p/F50-OpenWrt-Dashboard",
   "base_commit": "9bc73d314573fbc8024049f400f15c17cbc857e5",
-  "odi_status": "new observation and shadow sources prepared in this publication; not present in base commit",
+  "odi_status": "UUID, history inference, router sampler, SQLite archive and Wi-Fi subscriber source; F50 deployed, generic hardware unverified",
   "source_sha256": {
     "extras/router-traffic/app/acl.json": "4db3357e141ab20bb9d718f2b4a98b61eb2cf25cb6ca4f95bbe7154b57825034",
     "extras/router-traffic/app/collector.uc": "3e23ec56b83603ac15d9a4abaf1fac17da2b3b1c76ce31d52e8620abfe2e5d81",
@@ -71,16 +71,27 @@
     "extras/router-traffic/wan/fonts/SOURCE.json": "508339f0c2ab7f3e89abd7ec7ae686bcbee22f62b0255928718045efb8e1ec73",
     "extras/router-traffic/wan/style.css": "347b5b8db0fedac350a4d276f26c6d07148ef639beb00120dbf16cb0db5e8e11",
     "extras/router-traffic/wan/view.js": "44464fd521b4be05d61b682f4cbc7ac37fdcd92f0b70fb3316ac9a3a33d0812f",
-    "extras/odi/agent.uc": "5a1964759cebb271696cd343a16655ae1da84d02b6270d90f8840384c9e7e7d9",
+    "extras/odi/agent.uc": "bb5aa72281b51a944865eb98e2d353198bd32e9b6c78fbd0a286894ec2f60b07",
+    "extras/odi/archive.uc": "81336474a751687dc8af397547d661336f6c68a1b41935a788e6be82ccf1dde5",
     "extras/odi/dhcp-event.uc": "0aa6fb9f133875c1cde08d1b3a751a0697682c03f5b43648af3aa2c01e45f7b8",
     "extras/odi/dhcp-hotplug": "6bff47e85ff4771348ae4db93ae33ac212df5fbb712a62f761578f084661f5c1",
+    "extras/odi/events-service": "2ce7decab442c7a7dc6d6b12041e80f8d7d63c98fb10623780628f646c992c76",
     "extras/odi/identity.uc": "6de9b5f7daae91c0cff92ec9a89b03b39f2703afd84e21a8cb9c04c93ef9b8f1",
+    "extras/odi/learning.uc": "22b8da837380bcc03959abb266ddc9ef66df15c2d519b6c80a698b7c02691b94",
+    "extras/odi/LICENSE": "99cc79e6a7a44f927b75b0548e43d745897eca6a60fd4074fae013112508a070",
+    "extras/odi/mdns.uc": "92c4f80f8e4927bd81d25ae0f50c609c8d39be34eb2b1035a5deb4717285ba73",
     "extras/odi/normalize.uc": "27de875e58a9aef443521a9f95ff1bdab37e2d9486c6a6802f61372318beea4d",
-    "extras/odi/README.md": "0759e9ab2b5cef7fe00793966dda2553f32cbaf52ea23b05deb7e288b5d448ff",
+    "extras/odi/README.md": "de5dce56dd6cf3229d18ef7ff9e3ad0fe052001fe923fb9ba9b114bf2a975ee7",
+    "extras/odi/sampler.uc": "c0f44ac1cf6a7c45ccae76e6dd642fb36aed707b369ef9c5152544641ae55f00",
     "extras/odi/service": "55c8cf46e811b3c7e93f4d87b91ce3b94617b1bda7a7b5babf3fcc72d3f3878a",
-    "extras/odi/SHA256SUMS": "6dae9b5988f5e3e23f4a8f1cb211b0c9e4778c35b045bdd5771bc3012e81347e",
+    "extras/odi/SHA256SUMS": "eae36226d6131c49f4269f0ae32972ad02e0fff9725eafd7ba98d89a6f39d207",
+    "extras/odi/subjects.uc": "43ff1caa3ae9d9f615d6b395feb06f5a4fb7d53116ccbc7f7afbd93c893a8ade",
+    "extras/odi/tests-learning.uc": "67f16e2742f387fb2270c981049bf981cc144a5ffaa265933bd0f87b548ddde2",
+    "extras/odi/tests-priority.uc": "25905deed27e4ef95ab482a3bf2ca514c5d5e7271610c077509b81bbf0e79c1d",
+    "extras/odi/tests-sampler.uc": "11e9ca15611cdd8226d8ac108f5ecf837b4af0161ed61fbf7c48ac72095186bf",
     "extras/odi/tests.uc": "2e5778125bcf10e2fb7e1a648f7ba98c3472beee877ab6b6a8a5bcd12d505db1",
-    "extras/odi/LICENSE": "99cc79e6a7a44f927b75b0548e43d745897eca6a60fd4074fae013112508a070"
+    "extras/odi/wifi-events.uc": "3bee07120829d0a6d687b0c23f4f134274d021d995d3f562a4077c0f00a383fa",
+    "extras/odi/wifi-normalize.uc": "212075d2c19604e38a4d9e6e1afe3d4b2d150fb74e343844bee44f50d4e4574e"
   },
   "standalone_changes": [
     "panel README version corrected to 0.3.3",
@@ -88,5 +99,6 @@
     "ODI service passes ODI_REGISTRY_PATH",
     "Added project docs and existing MIT license"
   ],
-  "source_publication_commit": "fb5c8bada475d0cf831d344c02c8cd5209d40451"
+  "source_publication_commit": "e69051cfdbc1a79dcd5ff6a1b85ad26d3fbdf6e1",
+  "sync_date": "2026-11-02"
 }

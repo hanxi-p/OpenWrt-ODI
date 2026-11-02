@@ -46,3 +46,15 @@ identity.uc读取现有F50档案，仅在同一本机注册表中为未知MAC寻
 ## 独立仓库的档案适配
 
 本目录是F50影子版的独立复制。agent默认读取/etc/router-traffic/profiles.json，可通过ODI_REGISTRY_PATH覆盖；F50需显式指定/etc/f50-devices/profiles.json。service传递该环境参数。此适配不迁移档案、不跨站点合并，不代表其他路由器已通过实机验证。仍需手动审阅部署，未提供一键整合安装器。
+
+## 特征历史阶段
+
+新增learning.uc、mdns.uc与tests-learning.uc。按MAC保留多版本特征并统计窗口重复性/档案内碰撞，地址唯一对应时补mDNS名称、服务和型号提示；动态生成解释候选，仍不自动关联。历史包含在独立ODI持久状态中，每10分钟及正常停止保存。字段版本最多4个、单特征4KiB、未见记录7天淘汰，模型条目预算约2MiB。详细进度及分类器设计见项目docs；不能把窗口计数称为训练准确率。
+
+## 路由器留样
+
+采样由路由器ODI后台执行，按五分钟窗口/特征变化留样，私有日志容量轮换，标签单独保存且不从推断自动生成。实现为sampler.uc，测试为tests-sampler.uc；文件与限制见项目docs/DATASET.md。
+
+## UUID主视图、SQLite及实时事件
+
+新增subjects.uc统一上层UUID，MAC仅作原始标识；新增archive.uc写入SQLite档案归档，wifi-events.uc独立订阅Wi-Fi关联/授权/断开。原注册表和自研计数保持，nlbwmon不安装。详见项目docs/IDENTITY-AND-SERVICES.md；真实事件和跨硬件测试边界以文档为准。
